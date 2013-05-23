@@ -1,0 +1,24 @@
+doctype 5
+html(lang="en")
+  head
+    title Moticons
+    link(rel="stylesheet", href="css/moticons.css")
+
+    :stylus
+      body
+        text-align center
+        font-family "Helvetica Neue", sans-serf
+
+      .example
+        float left
+        width 128px
+        height 128px
+        margin 8px
+
+  body
+    each image in locals
+      .example
+        figure(class="moticon #{image}")
+        p= image
+
+    p

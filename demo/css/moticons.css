@@ -1,0 +1,132 @@
+.moticon {
+  border: 1px dotted #ccc;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  -webkit-animation: animate 0.6s steps(15, end) 1;
+  -moz-animation: animate 0.6s steps(15, end) 1;
+  -o-animation: animate 0.6s steps(15, end) 1;
+  -ms-animation: animate 0.6s steps(15, end) 1;
+  animation: animate 0.6s steps(15, end) 1;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.moticon:hover {
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.icons-04 {
+  background-image: url("../png/icons-04.png");
+}
+.icons-05 {
+  background-image: url("../png/icons-05.png");
+}
+.icons-06 {
+  background-image: url("../png/icons-06.png");
+}
+.icons-07 {
+  background-image: url("../png/icons-07.png");
+}
+.icons-08 {
+  background-image: url("../png/icons-08.png");
+}
+.icons-09 {
+  background-image: url("../png/icons-09.png");
+}
+.icons-10 {
+  background-image: url("../png/icons-10.png");
+}
+.icons-11 {
+  background-image: url("../png/icons-11.png");
+}
+.icons-12 {
+  background-image: url("../png/icons-12.png");
+}
+.icons_lightbulb {
+  background-image: url("../png/icons_lightbulb.png");
+}
+.icons_mail {
+  background-image: url("../png/icons_mail.png");
+}
+.icons_search {
+  background-image: url("../png/icons_search.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .moticon {
+    -webkit-background-size: 1028px 64px;
+    -moz-background-size: 1028px 64px;
+    background-size: 1028px 64px;
+  }
+  .icons-04 {
+    background-image: url("../png/icons-04@2x.png");
+  }
+  .icons-05 {
+    background-image: url("../png/icons-05@2x.png");
+  }
+  .icons-06 {
+    background-image: url("../png/icons-06@2x.png");
+  }
+  .icons-07 {
+    background-image: url("../png/icons-07@2x.png");
+  }
+  .icons-08 {
+    background-image: url("../png/icons-08@2x.png");
+  }
+  .icons-09 {
+    background-image: url("../png/icons-09@2x.png");
+  }
+  .icons-10 {
+    background-image: url("../png/icons-10@2x.png");
+  }
+  .icons-11 {
+    background-image: url("../png/icons-11@2x.png");
+  }
+  .icons-12 {
+    background-image: url("../png/icons-12@2x.png");
+  }
+  .icons_lightbulb {
+    background-image: url("../png/icons_lightbulb@2x.png");
+  }
+  .icons_mail {
+    background-image: url("../png/icons_mail@2x.png");
+  }
+  .icons_search {
+    background-image: url("../png/icons_search@2x.png");
+  }
+}
+@-moz-keyframes animate {
+  100% {
+    background-position: -1028px;
+  }
+}
+@-webkit-keyframes animate {
+  100% {
+    background-position: -1028px;
+  }
+}
+@-o-keyframes animate {
+  100% {
+    background-position: -1028px;
+  }
+}
+@-ms-keyframes animate {
+  100% {
+    background-position: -1028px;
+  }
+}
+@keyframes animate {
+  100% {
+    background-position: -1028px;
+  }
+}
