@@ -1,0 +1,40 @@
+// Get the width and height of the first image
+img = " " + s("../../demo/png/%s.png", unquote(list[0]))
+w = image-size(img)[0]
+h = image-size(img)[1]
+
+.moticn
+  display block
+  width h
+  height h
+  background no-repeat
+  background-position 0px - w + h
+  animation motbac 300ms steps(15, start) forwards
+
+  /* Use transform to smooth animation on mobile */
+  transform translateZ(0)
+
+.moticn
+  &:hover, &:active
+    background-position 0 0
+    animation motfor 300ms steps(15, start) forwards
+
+@keyframes motbac
+    to
+      background-position 0px
+
+@keyframes motfor
+    to
+      background-position 0px - w + h
+
+for item in list
+  .{item}
+    background-image 'url("../png/%s.png")' % unquote(item)
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .moticn
+    background-size w h
+
+  for item in list
+    .{item}
+      background-image 'url("../png/%s@2x.png")' % unquote(item)

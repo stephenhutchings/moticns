@@ -1,24 +1,87 @@
 doctype 5
 html(lang="en")
   head
-    title Moticons
-    link(rel="stylesheet", href="css/moticons.css")
+    title Moticns
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/moticns.css")
 
     :stylus
       body
         text-align center
         font-family "Helvetica Neue", sans-serf
 
+      h1
+        font-size 120px
+        margin-bottom 0
+
+        em
+          color #ccc
+          font-style normal
+
+        small
+          display block
+          margin-top 20px
+          font-size 18px
+          font-weight normal
+          color #aaa
+
+      aside
+        width 316px
+        margin auto
+        line-height 1.5
+
+      a
+        color #fa0
+
+      .moticn
+        margin 0 auto
+        -webkit-tap-highlight-color transparent
+
+      .icons
+        padding 24px 0
+        width 864px
+        margin 36px auto
+        border-top 1px solid #ccc
+        border-bottom 1px solid #ccc
+
       .example
-        float left
+        display inline-block
         width 128px
         height 128px
         margin 8px
 
-  body
-    each image in locals
-      .example
-        figure(class="moticon #{image}")
-        p= image
+        .icon-container
+          display inline-block
+          padding 4px
+          border 4px solid #eee
+          border-radius 8px
+          transition background-color 200ms
 
-    p
+          &:hover
+            background-color #fa0
+
+      @media only screen and (max-width: 480px)
+        h1
+          font-size 60px
+        .icons
+          width 288px
+
+  body
+    h1
+      | Moti
+      em c
+      | ns
+
+      small
+        | 12 lovingly crafted, geometric animated icons.
+
+    .icons
+      each image in locals
+        .example
+          .icon-container
+            figure(onclick="", class="moticn #{image}")
+          p= image
+
+    aside
+      :markdown
+        Moticns are available at **16px**, **32px**, **64px** and **128px** as transparent or flat **PNGs**. You can also grab the source **SVGs** as well as the **CSS** ([ugly](./css/moticons.min.css) or [beautiful](./css/moticons.css)).

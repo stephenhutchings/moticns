@@ -21,24 +21,40 @@ require("http").createServer((request, response) ->
 
 # Recompile on change any source, including the compiler
 watch.createMonitor "./src", (monitor) ->
-  restart = () ->
-    # In case the 
-    delete require.cache[require.resolve("./src/coffee/compiler")]
-    compiler = require("./src/coffee/compiler")
-    compiler.compile()
+  compiling = false
+  console.log "compiler -> watching"
+
+  restart = (f) ->
+    return if compiling
+
+    # Cachebust the compiler
+    if f is "src/coffee/compiler.coffee"
+      delete require.cache[require.resolve("./src/coffee/compiler")]
+      compiler = require("./src/coffee/compiler")
+
+    compiler.compile () ->
+      # Allow restart
+      console.log "compiler -> complete"
+      setTimeout ( ->
+        compiling = false
+        console.log "compiler -> watching"
+      ), 100
+
+    compiling = true
+    console.log "compiler -> compiling"
 
   monitor.files["./src/*"]
   monitor.on "created", (f, stat) ->
     # Handle new files
     console.log "created #{f}"
-    restart()
+    restart(f)
 
   monitor.on "changed", (f, curr, prev) ->
     # Handle file changes
     console.log "changed #{f}"
-    restart()
+    restart(f)
 
   monitor.on "removed", (f, stat) ->
     # Handle removed files
     console.log "removed #{f}"
-    restart()
+    restart(f)
