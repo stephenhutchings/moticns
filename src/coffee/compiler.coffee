@@ -62,9 +62,9 @@ createPngs = (images, callback) ->
          demo/png/#{image}#{h}.png",
          (err) -> count(err, svg))
 
-    # Convert 4 sizes
-    [1..4].forEach (el, i) ->
-      convert 256 * Math.pow(2, i), 16 * Math.pow(2, i)
+    # Convert 4 sizes at 2 to the nth
+    [1..4].forEach (n) ->
+      convert 256 * Math.pow(2, n), 16 * Math.pow(2, n)
 
     console.log "Coverting... #{svg}"
 
