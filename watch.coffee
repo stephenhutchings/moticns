@@ -32,13 +32,16 @@ watch.createMonitor "./src", (monitor) ->
       delete require.cache[require.resolve("./src/coffee/compiler")]
       compiler = require("./src/coffee/compiler")
 
+    # Delay recompile with slower SVG files
+    buffer = if f.match(/\.svg/gi) then 100 else 0
+
     compiler.compile () ->
       # Allow restart
       console.log "compiler -> complete"
       setTimeout ( ->
         compiling = false
         console.log "compiler -> watching"
-      ), 100
+      ), buffer
 
     compiling = true
     console.log "compiler -> compiling"

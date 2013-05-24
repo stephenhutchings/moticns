@@ -1,5 +1,5 @@
 // Get the width and height of the first image
-img = " " + s("../../demo/png/%s.png", unquote(list[0]))
+img = " " + s("../../demo/png/%s64.png", unquote(list[0]))
 w = image-size(img)[0]
 h = image-size(img)[1]
 
@@ -29,7 +29,7 @@ h = image-size(img)[1]
 
 for item in list
   .{item}
-    background-image 'url("../png/%s.png")' % unquote(item)
+    background-image 'url("../png/%s64.png")' % unquote(item)
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
   .moticn
@@ -37,4 +37,4 @@ for item in list
 
   for item in list
     .{item}
-      background-image 'url("../png/%s@2x.png")' % unquote(item)
+      background-image 'url("../png/%s128.png")' % unquote(item)

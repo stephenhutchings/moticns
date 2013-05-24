@@ -41,8 +41,8 @@ createPngs = (images, callback) ->
   
   # Keep a store of save pngs and callback when all saved
   counter = 0
-  count = (err) ->
-    throw err if err
+  count = (err, svg) ->
+    console.log "error #{err} converting #{svg}" if err
     counter++
     if counter is images.length * 2
       callback()
@@ -50,16 +50,23 @@ createPngs = (images, callback) ->
   images.forEach (image) ->
     svg     = "#{srcDir}/#{image}.svg"
     png     = "demo/png/#{image}.png"
-    png2x   = "demo/png/#{image}@2x.png"
     density = 96 * 4
 
-    loRes = "convert -quality 100 -density #{density}
-             -background transparent #{svg} -resize 1144x64 #{png}"
-    hiRes = "convert -quality 100 -density #{density}
-             -background transparent #{svg} -resize 2288x128 #{png2x}"
+    convert = (w, h) ->
+      easyimg.exec(
+        "convert
+         -quality 100
+         -density #{density}
+         -background transparent #{svg}
+         -resize #{w}x#{h}
+         demo/png/#{image}#{h}.png",
+         (err) -> count(err, svg))
 
-    easyimg.exec loRes, (err) -> count(err)
-    easyimg.exec hiRes, (err) -> count(err)
+    # Convert 4 sizes
+    [1..4].forEach (el, i) ->
+      convert 256 * Math.pow(2, i), 16 * Math.pow(2, i)
+
+    console.log "Coverting... #{svg}"
 
 
 
