@@ -26,40 +26,40 @@
   animation: motfor 300ms steps(15, start) forwards;
 }
 .moticns_calendar {
-  background-image: url("/png/moticns_calendar64.png");
+  background-image: url("../png/moticns_calendar64.png");
 }
 .moticns_camera {
-  background-image: url("/png/moticns_camera64.png");
+  background-image: url("../png/moticns_camera64.png");
 }
 .moticns_download {
-  background-image: url("/png/moticns_download64.png");
+  background-image: url("../png/moticns_download64.png");
 }
 .moticns_flag {
-  background-image: url("/png/moticns_flag64.png");
+  background-image: url("../png/moticns_flag64.png");
 }
 .moticns_garbage {
-  background-image: url("/png/moticns_garbage64.png");
+  background-image: url("../png/moticns_garbage64.png");
 }
 .moticns_home {
-  background-image: url("/png/moticns_home64.png");
+  background-image: url("../png/moticns_home64.png");
 }
 .moticns_lightbulb {
-  background-image: url("/png/moticns_lightbulb64.png");
+  background-image: url("../png/moticns_lightbulb64.png");
 }
 .moticns_mail {
-  background-image: url("/png/moticns_mail64.png");
+  background-image: url("../png/moticns_mail64.png");
 }
 .moticns_pencil {
-  background-image: url("/png/moticns_pencil64.png");
+  background-image: url("../png/moticns_pencil64.png");
 }
 .moticns_search {
-  background-image: url("/png/moticns_search64.png");
+  background-image: url("../png/moticns_search64.png");
 }
 .moticns_settings {
-  background-image: url("/png/moticns_settings64.png");
+  background-image: url("../png/moticns_settings64.png");
 }
 .moticns_support {
-  background-image: url("/png/moticns_support64.png");
+  background-image: url("../png/moticns_support64.png");
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .moticn {
@@ -68,40 +68,40 @@
     background-size: 1024px 64px;
   }
   .moticns_calendar {
-    background-image: url("/png/moticns_calendar128.png");
+    background-image: url("../png/moticns_calendar128.png");
   }
   .moticns_camera {
-    background-image: url("/png/moticns_camera128.png");
+    background-image: url("../png/moticns_camera128.png");
   }
   .moticns_download {
-    background-image: url("/png/moticns_download128.png");
+    background-image: url("../png/moticns_download128.png");
   }
   .moticns_flag {
-    background-image: url("/png/moticns_flag128.png");
+    background-image: url("../png/moticns_flag128.png");
   }
   .moticns_garbage {
-    background-image: url("/png/moticns_garbage128.png");
+    background-image: url("../png/moticns_garbage128.png");
   }
   .moticns_home {
-    background-image: url("/png/moticns_home128.png");
+    background-image: url("../png/moticns_home128.png");
   }
   .moticns_lightbulb {
-    background-image: url("/png/moticns_lightbulb128.png");
+    background-image: url("../png/moticns_lightbulb128.png");
   }
   .moticns_mail {
-    background-image: url("/png/moticns_mail128.png");
+    background-image: url("../png/moticns_mail128.png");
   }
   .moticns_pencil {
-    background-image: url("/png/moticns_pencil128.png");
+    background-image: url("../png/moticns_pencil128.png");
   }
   .moticns_search {
-    background-image: url("/png/moticns_search128.png");
+    background-image: url("../png/moticns_search128.png");
   }
   .moticns_settings {
-    background-image: url("/png/moticns_settings128.png");
+    background-image: url("../png/moticns_settings128.png");
   }
   .moticns_support {
-    background-image: url("/png/moticns_support128.png");
+    background-image: url("../png/moticns_support128.png");
   }
 }
 @-moz-keyframes motbac {
