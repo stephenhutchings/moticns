@@ -4,7 +4,7 @@
 
 -------------------
 
-### How to use
+### How to make yourself
 
 The source SVG files are used to create demo and the CSS.
 The source files are watched for changes, so editing the SVG, compiler, jade or stylus files will recompile everything. The demo is served locally so you can view it in your browser.
