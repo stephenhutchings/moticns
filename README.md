@@ -53,3 +53,11 @@ http://localhost:3000/
 ```
 
 Edit/save the SVG, and refresh the page. Voila!
+
+-------------------
+
+To update gh-pages
+
+```
+https://stephenhutchings@github.com/stephenhutchings/moticns.git
+```
